@@ -289,7 +289,12 @@ Dim StrResult As String
                  Range("A" & ligneDebut & ":D" & ligneDebut).Select
                  Selection.Style = "Accent1"
                  Selection.Font.Bold = True
-                 ActiveCell.FormulaR1C1 = nbRondeRestante & " RONDES RESTANTES"
+                 If nbRondeRestante = 1 Then
+                    ActiveCell.FormulaR1C1 = nbRondeRestante & " RONDE RESTANTE"
+                 Else
+                    ActiveCell.FormulaR1C1 = nbRondeRestante & " RONDES RESTANTES"
+                 End If
+
             End If
              
              'AJOUTE LA LIGNE "RONDES PERDUES"
@@ -313,7 +318,12 @@ Dim StrResult As String
                  Range("A" & ligneDebut & ":D" & ligneDebut).Select
                  Selection.Style = "Insatisfaisant"
                  Selection.Font.Bold = True
-                 ActiveCell.FormulaR1C1 = nbRondePerdue & " RONDES PERDUES"
+                 
+                 If nbRondePerdue = 1 Then
+                    ActiveCell.FormulaR1C1 = nbRondePerdue & " RONDE PERDUE"
+                 Else
+                    ActiveCell.FormulaR1C1 = nbRondePerdue & " RONDES PERDUES"
+                 End If
                  
              End If
              
@@ -338,7 +348,12 @@ Dim StrResult As String
                  Range("A" & ligneDebut & ":D" & ligneDebut).Select
                  Selection.Style = "Neutre"
                  Selection.Font.Bold = True
-                 ActiveCell.FormulaR1C1 = nbRondeNulle & " RONDES NULLES"
+                 
+                 If nbRondeNulle = 1 Then
+                    ActiveCell.FormulaR1C1 = nbRondeNulle & " RONDE NULLE"
+                 Else
+                    ActiveCell.FormulaR1C1 = nbRondeNulle & " RONDES NULLES"
+                 End If
              End If
              
              'AJOUTE LA LIGNE "RONDES GAGNEES"
@@ -362,7 +377,12 @@ Dim StrResult As String
                  Range("A" & ligneDebut & ":D" & ligneDebut).Select
                  Selection.Style = "Satisfaisant"
                  Selection.Font.Bold = True
-                 ActiveCell.FormulaR1C1 = nbRondeGagnee & " RONDES GAGNEES"
+                 
+                 If nbRondeGagnee = 1 Then
+                    ActiveCell.FormulaR1C1 = nbRondeGagnee & " RONDE GAGNEE"
+                 Else
+                    ActiveCell.FormulaR1C1 = nbRondeGagnee & " RONDES GAGNEES"
+                 End If
              End If
        
         
