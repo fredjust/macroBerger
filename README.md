@@ -1,2 +1,2 @@
 # macroBerger
-parcours de joueurs a partir d'une grille berger de papi
+Génération des parcours des joueurs à partir d'une grille berger de papi  
